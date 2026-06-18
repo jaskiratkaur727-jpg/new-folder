@@ -1,0 +1,16 @@
+body {
+    font-family: Arial;
+    background-color: beige ;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(251, 248, 248);
+    background-color: rgba(53, 140, 108, 0.362);
+}
+section{
+    background-color: rgba(154, 233, 206, 0.362);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;}
