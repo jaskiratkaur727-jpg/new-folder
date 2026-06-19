@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function greet(name){
+        return "Hello " + name;
+    }
+    console.log(greet("jaskirat"));
+    document.write(greet("jaskirat"));
+        //invoking the function
+        //using user events
+        function sayhi(){
+        window.alert("Button Clicked");
+    }
+    //using javascript
+    function add(a,b){
+        return a+b;
+    }
+    console.log(add(5,10)); 
+    function name(p1,p2){
+        return p1+p2;
+    }
+    //using automatic invocation
+    (function(){
+        console.log("this function is automatically invoked");
+    })();
+    </script>
+     <br><br>
+     <button onclick="sayhi()">Click me</button>
+</body></html>
