@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // declaring a object
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+        start: function(){document.write("Car started<br>");},
+        stop: function(){document.write("Car stopped<br>");}
+    };
+    person.start();
+    person.stop();
+    console.log(person.firstName);
+    console.log(person.lastName);
+    console.log(person.age);
+    console.log(person.eyeColor);
+     const person2={
+        name:"jaskirat",
+        age:20,
+        city:"chandigarh",
+        vote: function(){
+            if(this.age>=18){
+                document.write(this.name+" is eligible to vote<br>");
+            }
+            else{
+                document.write(this.name+" is not eligible to vote<br>");
+            }
+        }
+     }
+      document.write("the result is: <br>");
+     person2.vote();
+</script>
+</body>
+</html>

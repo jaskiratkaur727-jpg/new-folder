@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple DHTML Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .calculator {
+            width: 250px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button{
+            width: 45px;
+            height: 40px;
+            margin: 5px;
+            font-size: 18px;
+        }
+        button:hover{
+             transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        h3 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function calculate(operator) {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter both numbers");
+                return;
+            }
+
+            switch(operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+
+                case '-':
+                    result = num1 - num2;
+                    break;
+
+                case '*':
+                    result = num1 * num2;
+                    break;
+
+                case '/':
+                    if (num2 == 0) {
+                        result = "Cannot divide by zero";
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Result = " + result;
+        }   
+    </script>
+
+    <div class="calculator">
+        <h2>CALCULATOR</h2>
+
+        <input type="number" id="num1" placeholder="Enter First Number">
+        <br>
+
+        <input type="number" id="num2" placeholder="Enter Second Number">
+        <br>
+
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">*</button>
+        <button onclick="calculate('/')">/</button>
+
+        <h3 id="result">Result = </h3>
+    </div>
+
+</body>
+</html>
