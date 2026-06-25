@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <script>
+function validateform() {
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (username === "") {
+        alert("Username must be filled out");
+        return false;
+    }
+
+    if (email === "" || !email.includes("@") || !email.includes(".")) {
+        alert("Email must be filled out correctly");
+        return false;
+    }
+
+    if (password === "" || password.length < 8 || !password.includes("#")) {
+        alert("Password must be at least 8 characters long and contain #");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form id="registrationForm">
+        <label>username</label>
+        <input type="text" id="username" placeholder="enter username" required><br><br>
+
+        <label>email</label>
+        <input type="email" id="email"placeholder="enter email" ><br><br>
+
+        <label>password</label>
+        <input type="password" id="password" placeholder="enter password"><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
